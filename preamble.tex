@@ -55,7 +55,6 @@
 
 	\usepackage{parskip}
 
-
 	% correct
 	\definecolor{correct}{HTML}{009900}
 	\newcommand\correct[2]{\ensuremath{\:}{\color{red}{#1}}\ensuremath{\to }{\color{correct}{#2}}\ensuremath{\:}}
@@ -71,13 +70,14 @@
 	\newcommand{\dx}{\,\mathrm{d}x}
 	\newcommand{\dy}{\,\mathrm{d}y}
 	\newcommand{\dz}{\,\mathrm{d}z}
+	\newcommand{\dt}{\,\mathrm{d}t}
 
 	% hide parts
 	\newcommand\hide[1]{}
 
 	% si unitx
 	\usepackage{siunitx}
-	\sisetup{locale = FR}
+	\sisetup{locale = US}
 	% \renewcommand\vec[1]{\mathbf{#1}}
 	\newcommand\mat[1]{\mathbf{#1}}
 
@@ -153,23 +153,23 @@
 
 	\theoremstyle{definition}
 
-\declaretheoremstyle[
+	\declaretheoremstyle[
 	headfont=\bfseries\sffamily\color{\definitioncolor!70!black}, bodyfont=\normalfont,
 	mdframed={
-			linewidth=3pt,
-			leftline=true, rightline=false, topline=false, bottomline=false,
-			linecolor=\definitioncolor!30, backgroundcolor=\definitioncolor!1,
-			splitbottomskip=3em,
-			splittopskip=0em,
-			afterbreak=\ifmdffirstframe{\begin{minipage}{\linewidth}\vspace{-1.5em}\color{\definitioncolor!70!black}\centering $\bm{\cdots}$\end{minipage}}\fi,
-			beforelastframe={\begin{mdframed}[innerbottommargin=2em]\color{\definitioncolor!70!black}\centering $\bm{\cdots}$\end{mdframed}\vspace{-0.1em}},
-		}
+	linewidth=1pt,
+	leftline=true, rightline=false, topline=false, bottomline=false,
+	linecolor=\definitioncolor!30, backgroundcolor=\definitioncolor!1,
+	splitbottomskip=3em,
+	splittopskip=0em,
+	afterbreak=\ifmdffirstframe{\begin{minipage}{\linewidth}\vspace{-1.5em}\color{\definitioncolor!70!black}\centering $\bm{\cdots}$\end{minipage}}\fi,
+beforelastframe={\begin{mdframed}[innerbottommargin=2em]\color{\definitioncolor!70!black}\centering $\bm{\cdots}$\end{mdframed}\vspace{-0.1em}},
+}
 ]{thmdefinitionbox}
 
 \declaretheoremstyle[
 	headfont=\bfseries\sffamily\color{\examplecolor!70!black}, bodyfont=\normalfont,
 	mdframed={
-			linewidth=3pt,
+			linewidth=1pt,
 			leftline=true, rightline=false, topline=false, bottomline=false,
 			linecolor=\examplecolor!30, backgroundcolor=\examplecolor!3,
 			splitbottomskip=3em,
@@ -182,7 +182,7 @@
 \declaretheoremstyle[
 	headfont=\bfseries\sffamily\color{\problemcolor!70!black}, bodyfont=\normalfont,
 	mdframed={
-			linewidth=3pt,
+			linewidth=1pt,
 			leftline=true, rightline=false, topline=false, bottomline=false,
 			linecolor=\problemcolor!30, backgroundcolor=\problemcolor!3,
 			splitbottomskip=3em,
@@ -195,7 +195,7 @@
 \declaretheoremstyle[
 	headfont=\bfseries\sffamily\color{\propositioncolor!70!black}, bodyfont=\normalfont,
 	mdframed={
-			linewidth=3pt,
+			linewidth=1pt,
 			leftline=true, rightline=false, topline=false, bottomline=false,
 			linecolor=\propositioncolor!30, backgroundcolor=\propositioncolor!3,
 			splitbottomskip=3em,
@@ -208,7 +208,7 @@
 \declaretheoremstyle[
 	headfont=\bfseries\sffamily\color{\proofcolor!70!black}, bodyfont=\normalfont,
 	mdframed={
-			linewidth=3pt,
+			linewidth=1pt,
 			leftline=true, rightline=false, topline=false, bottomline=false,
 			linecolor=\proofcolor!30, backgroundcolor=\proofcolor!1,
 			splitbottomskip=3em,
@@ -221,7 +221,7 @@
 \declaretheoremstyle[
 	headfont=\bfseries\sffamily\color{\theoremcolor!70!black}, bodyfont=\normalfont,
 	mdframed={
-			linewidth=3pt,
+			linewidth=1pt,
 			leftline=true, rightline=false, topline=false, bottomline=false,
 			linecolor=\theoremcolor!30, backgroundcolor=\theoremcolor!3,
 			splitbottomskip=3em,
@@ -234,7 +234,7 @@
 \declaretheoremstyle[
 	headfont=\bfseries\sffamily\color{\lemmacolor!70!black}, bodyfont=\normalfont,
 	mdframed={
-			linewidth=3pt,
+			linewidth=1pt,
 			leftline=true, rightline=false, topline=false, bottomline=false,
 			linecolor=\lemmacolor!30, backgroundcolor=\lemmacolor!3,
 			splitbottomskip=3em,
@@ -247,7 +247,7 @@
 \declaretheoremstyle[
 	headfont=\bfseries\sffamily\color{\corollarycolor!70!black}, bodyfont=\normalfont,
 	mdframed={
-			linewidth=3pt,
+			linewidth=1pt,
 			leftline=true, rightline=false, topline=false, bottomline=false,
 			linecolor=\corollarycolor!30, backgroundcolor=\corollarycolor!3,
 			splitbottomskip=3em,
@@ -263,7 +263,7 @@
 	headfont=\bfseries\sffamily\color{\solutioncolor!70!black}, bodyfont=\normalfont,
 	numbered=no,
 	mdframed={
-			linewidth=3pt,
+			linewidth=1pt,
 			leftline=true, rightline=false, topline=false, bottomline=false,
 			linecolor=\solutioncolor!30, backgroundcolor=\solutioncolor!1,
 			splitbottomskip=3em,
@@ -277,7 +277,7 @@
 \declaretheoremstyle[
 	headfont=\bfseries\sffamily\color{NavyBlue!70!black}, bodyfont=\normalfont,
 	mdframed={
-			linewidth=3pt,
+			linewidth=1pt,
 			leftline=true, rightline=false, topline=false, bottomline=false,
 			linecolor=NavyBlue!30, backgroundcolor=NavyBlue!3,
 			splitbottomskip=3em,
