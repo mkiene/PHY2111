@@ -1,0 +1,245 @@
+% COMPOSITE
+
+\subsection{Part B - Graphical Analysis and Techniques}
+
+\subsubsection{Pre-Lab Questions}
+
+\begin{enumerate}
+	\setcounter{enumi}{14}
+	\item State two things that graphs are able to provide when comparing two variables.
+
+	      \textbf{Graphs provide visual trends and relationships, which are hard to visualize without a graphical image. They also represent quantitative parameters, which can let you extract important information about the dataset, such as a slope or intercept.}
+
+	\item What is the recommended type of plot to use for these graphs?
+
+	      \textbf{A scatter plot is recommended, which shows each point individually.}
+
+\end{enumerate}
+
+\paragraph{Procedure}~
+
+The goal of this exercise is for you to determine the relationship and constant of proportionality between the radius and area of a circle. You may already know what this relationship is, but here you will attempt to “prove” it to yourself. You will be provided the diameters of several circles, from which you can find the respective radii. The areas of the circles will be found by an independent method. If we then plot a graph of area vs. radius for these circles, hopefully the shape of the curve generated will suggest what the relationship is and allow you to “zero in on it” just like in the example from the instructions (separate instructions document).
+
+We will be using some data collected from circles of varying size cut out from rigid sheets of paper. If we first determine the area of the rectangular sheets of paper and measure their mass, we can compute the density of the paper. Thus, the area of the cut-out circles can be determined by measuring their mass and using the same density value.
+
+Let us define the two-dimensional (or surface) density as:
+\[
+	D = \frac{m}{A}
+\]
+where $m$ is the mass, and $A$ is the area it covers. Since a cut out of this same paper will have the same density as the entire sheet, we can solve for the area by using the same density and measured mass. Thus, we have
+\[
+	A = \frac{m}{D}
+	.\]
+Below is a set of data collected for two sheets of paper used to generate the circles we will use. That is followed by the dimensions of the cut-out circles.
+
+\newpage
+
+\begin{table}[htpb]
+	\centering
+	\caption{Measurements of Paper Sheets}
+	\label{tab:Table2.3}
+	\begin{tblr}{
+			hline{2-7} = {solid},
+			hline{1} = {2-3}{solid},
+			vline{2-4} = {solid},
+			vline{1} = {2-6}{solid},
+		}
+		                                  & Sheet 1 & Sheet 2 \\
+		Mass (\SI{}{g})                   & 9.198   & 9.104   \\
+		Length (\SI{}{cm})                & 27.93   & 28.01   \\
+		Width (\SI{}{cm})                 & 21.63   & 21.62   \\
+		Area ($\SI{}{cm^2}$)              & 604.1   & 605.6   \\
+		Density ($\SI{}{\frac{g}{cm^2}}$) & 0.01522 & 0.01503
+	\end{tblr}
+\end{table}
+
+\begin{remark}~
+	The average density $D_{\mathrm{avg}}$ is
+	\[
+		D_{\mathrm{avg}} = \frac{0.01522 + 0.01503}{2} \approx \SI{0.01513}{\frac{g}{cm^2}}
+		.\]
+\end{remark}
+
+\begin{table}[htpb]
+	\centering
+	\caption{Measurements of Paper Circles}
+	\label{tab:Table2.4}
+	\begin{tblr}{hlines, vlines}
+		{Diameter (\SI{}{cm})} & {Mass (\SI{}{g})} & {Area $\SI{}{cm^2}$} & {Radius (\SI{}{cm})} & {Radius$^2$ ($\SI{}{cm^2}$)} \\
+		4.88                   & 0.31              & 20.36                & 2.44                 & 5.95                         \\
+		6.19                   & 0.48              & 31.80                & 3.10                 & 9.58                         \\
+		7.09                   & 0.62              & 41.26                & 3.55                 & 12.57                        \\
+		7.89                   & 0.77              & 50.78                & 3.95                 & 15.56                        \\
+		9.15                   & 1.01              & 66.91                & 4.58                 & 20.93                        \\
+		10.35                  & 1.27              & 84.03                & 5.18                 & 26.78                        \\
+		11.75                  & 1.67              & 110.21               & 5.88                 & 34.52                        \\
+		15.63                  & 2.89              & 191.01               & 7.82                 & 61.07                        \\
+	\end{tblr}
+\end{table}
+
+\newpage
+
+\begin{enumerate}
+	\setcounter{enumi}{16}
+	\item Complete the area and density values in Table \ref{tab:Table2.3}. Be sure to provide one sample calculation of each here and remember to limit the digits appropriately. Recall that the area of a rectangle is length times width. Also, fill in the average density at the bottom of the table.
+	      \begin{remark}[Sample Calculation]~
+		      \begin{enumerate}[label=\alph*.]
+			      \item Given
+			            \begin{align*}
+				            \text{Mass} &= \SI{9.198}{g} \\
+				            \text{Length} &= \SI{27.93}{cm} \\
+				            \text{Width} &= \SI{21.63}{cm}
+				            .\end{align*}
+			      \item Calculations
+			            \begin{align*}
+				            A &= \SI{27.93}{cm} \times \SI{21.63}{cm} \approx \SI{604.1}{cm^2} \\
+				            D &= \frac{\SI{9.198}{g}}{\SI{604.1}{cm^2}} \approx \SI{0.01523}{\frac{g}{cm^2}}
+				            .\end{align*}
+		      \end{enumerate}
+	      \end{remark}
+
+	\item Using the average density found for Table \ref{tab:Table2.3}, use the masses of the circles in Table \ref{tab:Table2.4} to determine their respective areas (using the equation from earlier, $A = \frac{m}{D}$). Please provide one sample calculation here. Also compute the radii values from the diameters in Table \ref{tab:Table2.4}.
+	      \begin{remark}[Sample Calculation]~
+		      \begin{enumerate}[label=\alph*.]
+			      \item Given
+			            \begin{align*}
+				            D_{\mathrm{avg}} &= \SI{0.01513}{\frac{g}{cm^2}} \\
+				            \text{Diameter} &= \SI{4.88}{cm} \\
+				            \text{Mass} &= \SI{0.31}{g}
+				            .\end{align*}
+			            (The table has been rounded)
+			      \item Calculations
+			            \begin{align*}
+				            A &= \frac{\SI{0.308}{g}}{\SI{0.01513}{\frac{g}{cm^2}}} \approx \SI{20.36}{cm^2} \\
+				            r &= \frac{\SI{4.88}{cm}}{2} = \SI{2.44}{cm} \\
+				            r^2 &= 2.44^2 \approx \SI{5.95}{cm^2}
+				            .\end{align*}
+		      \end{enumerate}
+	      \end{remark}
+
+	      \newpage
+
+	\item Prepare a graph of Area vs. Radius and insert that here (copy and paste functions should work between Excel and Word). Double check to be sure you have the area data along the vertical axis and the radii along the horizontal axes. If not, you will want to reverse the columns in your spreadsheet before generating the graph. Remember to provide a title and label both the axes in a similar fashion as the above examples.
+	      \begin{tikzpicture}
+		      \begin{axis}[
+				      anchor=center,
+				      title={Area vs. Radius},
+				      xlabel={Radius (\si{cm})},
+				      ylabel={Area (\si{cm^2})},
+				      xmin=0, xmax=9,
+				      ymin=0, ymax=210,
+				      grid=both,
+				      width=0.8\textwidth,
+				      height=0.6\textwidth,
+			      ]
+			      \addplot[
+				      only marks,
+				      mark=*,
+				      mark size=1pt,
+			      ] table[row sep=\\] {
+					      Radius   Area\\
+					      2.44     20.36\\
+					      3.10     31.80\\
+					      3.55     41.26\\
+					      3.95     50.78\\
+					      4.58     66.91\\
+					      5.18     84.03\\
+					      5.88     110.21\\
+					      7.82     191.01\\
+				      };
+		      \end{axis}
+	      \end{tikzpicture}
+	\item Assuming the data points suggest some mathematical relationship, can you tell what it is? It should be parabolic. We can now draw the conclusion that the area of the circle is proportional to the square of the radius. If this is true, then a plot of Area vs. Radius$^2$ should yield a straight line. Go back to Table \ref{tab:Table2.4}, square each radius value and complete the final column on the right. Again, keep appropriate significant figures.
+
+	      \textbf{The mathematical relationship between a circle's area and its radius is, of course, $A=\pi r^2$.}
+
+	      \newpage
+
+	\item Prepare a plot of Area vs Radius$^2$. Again, double check the data ranges along the axes so you have the area data along the vertical axis, and label all the axes appropriately. The points should now suggest a straight line. Click on a data point and select Trendlines under the Chart menu. Insert the linear function and be sure to check mark the option to display the equation on the graph. Place this graph here.
+
+	      \begin{tikzpicture}
+		      \pgfplotsset{
+			      width=10cm,
+			      legend style={font=\footnotesize},
+		      }
+		      \begin{axis}[
+				      anchor=center,
+				      xlabel={Radius\(^2\) (\si{cm^2})},
+				      ylabel={Area (\si{cm^2})},
+				      legend cell align=left,
+				      legend pos=north west,
+				      xmin=0, xmax=65,
+				      ymin=0, ymax=210,
+				      grid=both,
+			      ]
+			      % Plot the data points:
+			      \addplot[only marks, mark=*, mark size=1pt] table[row sep=\\]{
+					      Radius2   Area\\
+					      5.95      20.36\\
+					      9.58      31.80\\
+					      12.57     41.26\\
+					      15.56     50.78\\
+					      20.93     66.91\\
+					      26.78     84.03\\
+					      34.52     110.21\\
+					      61.07     191.01\\
+				      };
+			      \addlegendentry{data}
+
+			      % Compute and plot the linear regression:
+			      \addplot[mark=none, densely dashed] table[row sep=\\, y={create col/linear regression={y=Area}}] {
+					      Radius2   Area\\
+					      5.95      20.36\\
+					      9.58      31.80\\
+					      12.57     41.26\\
+					      15.56     50.78\\
+					      20.93     66.91\\
+					      26.78     84.03\\
+					      34.52     110.21\\
+					      61.07     191.01\\
+				      };
+			      \addlegendentry{$A = \pgfmathprintnumber{\pgfplotstableregressiona}\,R^2\pgfmathprintnumber[print sign]{\pgfplotstableregressionb}$ (lin. regression)}
+
+		      \end{axis}
+	      \end{tikzpicture}
+\end{enumerate}
+
+\subsubsection{Post--Lab Questions}
+
+\begin{enumerate}
+	\setcounter{enumi}{21}
+	\item If we ignore the $y$-intercept (hopefully it is close to zero on your graph), the equation of a line is $y=mx$. Substituting in the variables from the graph, the equation becomes $A=cr^2$, where $A$ is the area, $r$ is the radius and $c$ represents the constant of proportionality. Judging by the value of the slope you got from the second graph and your geometry knowledge for the area of a circle, what common name do we have for this constant of proportionality?
+
+	      \textbf{The common name is pi $\left( \pi \right) = 3.14159265\ldots$}
+
+	\item Given the true value of this constant, find the percent error of the slope. Show your work here.
+	      \begin{align*}
+		      \text{Percent Error} &= \abs{ \frac{c_{\mathrm{\exp}}-c_{\mathrm{true}}}{c_{\mathrm{true}}}} \times \SI{100}{\percent} \\
+		      &= \abs{ \frac{3.1 - \pi}{\pi}} \times \SI{100}{\percent} \approx \SI{1.32}{\percent}
+		      .\end{align*}
+
+	      \newpage
+
+	\item Obviously, there are random errors in the mass and length measurements, as well as minor variations across a sheet of paper which will generate uncertainty in our slope. A quick way to estimate this uncertainty is to find the percent difference between the two density values found in Table \ref{tab:Table2.3}. Compute this percent difference and use that percentage to find the uncertainty in the slope value. Summarize the uncertainty range for the slope here. Show all your work.
+
+	      \begin{remark}~
+
+		      Sheet 1: $D_1 = \SI{0.01522}{\frac{g}{cm^2}}$
+
+		      Sheet 2: $D_2 = \SI{0.01503}{\frac{g}{cm^2}}$
+		      \begin{align*}
+			      \Delta D &= \abs{ D_1-D_2 } = \abs{ 0.01522 - 0.01503 } = \SI{0.00019}{\frac{g}{cm^2}} \\
+			      \overline{D} &= \frac{D_1 + D_2}{2} = \frac{0.01522 + 0.01503}{2} = \SI{0.015125}{\frac{g}{cm^2}} \\
+			      \text{Percent Diff.} &= \frac{\Delta D}{\overline{D}} \times \SI{100}{\percent} \approx \SI{1.26}{\percent} \\
+			      \Delta c &= c_{\mathrm{exp}} \times 0.0126 \approx 3.1 \times 0.0126 \approx 0.04
+			      .\end{align*}
+		      So, the slope is
+		      \[
+			      c = 3.1 \pm 0.04
+			      .\]
+	      \end{remark}
+
+	\item Does the accepted value for this known constant fall within the uncertainty range just determined above? What does this imply about the existence of any systematic errors in the data? In other words, do random errors alone explain the accuracy level attained in question.
+
+	      \textbf{The accepted value is pi ($3.14159265\ldots$), and the experimental result is $3.1 \pm 0.04$. This gives an uncertainty range from 3.06 to 3.14, meaning that the accepted value of $\pi$ does not fall within the estimated uncertainty range. There may be systematic errors in the experimental procedure that shift the experimental value away from the accepted value of pi, or more data points would shift the estimate higher so that it includes pi.}
+\end{enumerate}

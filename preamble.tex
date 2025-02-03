@@ -4,13 +4,13 @@
 \usepackage{textcomp}
 % \usepackage[dutch]{babel}
 \usepackage{url}
-% \usepackage{hyperref}
-% \hypersetup{
-%     colorlinks,
-%     linkcolor={black},
-%     citecolor={black},
-%     urlcolor={blue!80!black}
-% }
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks,
+	linkcolor={black},
+	citecolor={black},
+	urlcolor={blue!80!black}
+}
 \usepackage{graphicx}
 \usepackage{float}
 \usepackage{booktabs}
@@ -72,6 +72,10 @@
 	\newcommand{\dz}{\,\mathrm{d}z}
 	\newcommand{\dt}{\,\mathrm{d}t}
 
+	% table of contents
+	% \setcounter{secnumdepth}{4}
+	\setcounter{tocdepth}{4}
+
 	% hide parts
 	\newcommand\hide[1]{}
 
@@ -89,6 +93,7 @@
 	\usetikzlibrary{arrows.meta}
 	\usetikzlibrary{babel}
 	\usepackage{pgfplots}
+	\usepackage{pgfplotstable}
 	\pgfplotsset{
 		compat=newest,
 		table/search path={build/},
