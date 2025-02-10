@@ -1,0 +1,31 @@
+% COMPOSITE
+
+\newpage
+
+\subsection{Problem 6}
+
+The minute hand on a watch is \SI{3.00}{cm} in length. Use a coordinate system in which the $y$-axis points towards the 12 on the watch face.
+
+\setcounter{partcounter}{2}
+\paragraph{Parts A-B}
+
+\begin{enumerate}[label=\Alph*.]
+	\item What is the displacement vector of the tip of the minute hand from 8:00 to 8:20 a.m.? Enter the $x$ and $y$ components of the displacement vector in centimeters separated by a comma.
+	\item What is the displacement vector of the tip of the minute hand from 8:00 to 9:00 a.m.? Enter the $x$ and $y$ components of the displacement vector in centimeters separated by a comma.
+\end{enumerate}
+
+\begin{solution}
+	At 8:00 a.m., the minute hand would be pointing directly up (positive $y$-axis).
+
+	At 8:20 a.m., the minute hand would be pointing \SI{30}{\degree} below the positive $x$-axis (or \SI{-30}{\degree}). This is because there are 12 hours on the clock, meaning there are 3 segments per quadrant, where each segment is $\frac{\SI{90}{\degree}}{3} = \SI{30}{\degree}$. Since there are 60 minutes in an hour with $\frac{60}{12} = 5$ minutes per segment, 20 minutes past any hour means that the minute hand would be $\frac{20}{5} = 4$ segments clockwise from the positive $y$-axis.
+
+	Now, we can find the $x$ and $y$ components of the "vectors" that are the minute hand at 8:00 ($\vec{A}$) and 8:20 ($\vec{B}$) and subtract $\vec{A}$ from $\vec{B}$.
+	\begin{align*}
+		\vec{A} &= \SI{3.00}{cm} \left( 0, 1 \right) \\
+		\vec{B} &= \SI{3.00}{cm} \left( \cos \left( -30 \right), \sin \left( -30 \right) \right) \\
+		\text{Displacement of Tip} &= \vec{B} - \vec{A} \\
+		&\approx \left( 2.60, -4.50 \right)
+		.\end{align*}
+
+	For part B, the minute had at any hour is pointing vertically up. Therefore, the displacement over an hour (even though the hand travels in a circular path) would be 0.
+\end{solution}

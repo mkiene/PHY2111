@@ -1,0 +1,34 @@
+% COMPOSITE
+
+\subsection{Problem 7}
+
+Find the area of a triangle with height \SI{555}{m} and base \SI{260}{m}, with uncertainties of \SI{12}{m} and \SI{15}{m}, respectively. Find the area, $A_{\mathrm{m}}$.
+
+\begin{align*}
+	A &= \frac{1}{2} b h \\
+	A &= \frac{1}{2} \times \SI{260}{m} \times \SI{555}{m} \\
+	&= \SI{72150}{m^2}
+	.\end{align*}
+
+Using the function rule, the uncertainty in the area is given by
+\[
+	\Delta A = \sqrt{\left(\frac{\partial A}{\partial b}\Delta b\right)^2 + \left(\frac{\partial A}{\partial h}\Delta h\right)^2}\,.
+\]
+Since
+\[
+	\frac{\partial A}{\partial b} = \frac{1}{2}h \quad \text{and} \quad \frac{\partial A}{\partial h} = \frac{1}{2}b\,,
+\]
+we have
+\[
+	\frac{\partial A}{\partial b} = \frac{1}{2}\times\SI{555}{m} = \SI{277.5}{m} \quad \text{and} \quad \frac{\partial A}{\partial h} = \frac{1}{2}\times\SI{260}{m} = \SI{130}{m}\,.
+\]
+
+Now, substitute the uncertainties \(\Delta b = \SI{15}{m}\) and \(\Delta h = \SI{12}{m}\):
+\begin{align*}
+	\Delta A &= \sqrt{\left(\SI{277.5}{m}\times\SI{15}{m}\right)^2 + \left(\SI{130}{m}\times\SI{12}{m}\right)^2} \\
+	&\approx \SI{4445.2}{m^2}\,.
+\end{align*}
+
+\begin{align*}
+	A_{\mathrm{m}} &= 72150 \pm \SI{4445.2}{m^2}\,.
+\end{align*}

@@ -1,0 +1,72 @@
+% COMPOSITE
+
+\subsection{Problem 9}
+
+\[
+	a = 12.0\pm0.5\,\text{cm},\quad b = 8.5\pm0.5\,\text{cm},\quad c = 9.8\pm0.5\,\text{cm},
+\]
+the volume of an ellipsoid is
+\[
+	V = \frac{4}{3}\pi\,a\,b\,c.
+\]
+
+\[
+	V = \frac{4}{3}\pi(12.0)(8.5)(9.8) \approx 4188\,\text{cm}^3.
+\]
+
+Using the function rule,
+\[
+	\Delta V = V \sqrt{\left(\frac{\Delta a}{a}\right)^2 + \left(\frac{\Delta b}{b}\right)^2 + \left(\frac{\Delta c}{c}\right)^2}.
+\]
+Calculate the relative uncertainties:
+\[
+	\frac{\Delta a}{a}=\frac{0.5}{12.0}\approx0.04167,\quad \frac{\Delta b}{b}=\frac{0.5}{8.5}\approx0.05882,\quad \frac{\Delta c}{c}=\frac{0.5}{9.8}\approx0.05102.
+\]
+\begin{align*}
+	\Delta V &\approx 4188 \sqrt{(0.04167)^2+(0.05882)^2+(0.05102)^2} \\
+	&\approx 4188 \sqrt{0.001736 + 0.003460 + 0.002602} \\
+	&\approx 4188 \sqrt{0.007798} \\
+	&\approx 4188\times 0.0883 \\
+	&\approx 370\,\text{cm}^3.
+\end{align*}
+
+\[
+	V_{\mathrm{m}} = (4188\pm370)\,\text{cm}^3.
+\]
+
+\newpage
+
+Kirsten needs to create a solution composed of \SI{150}{mL} of a chemical liquid. A variety of glassware is available. Table 1 describes the capacity and tolerance of each piece of glassware in Kirsten’s laboratory. For this problem, let us assume that Kirsten’s measurement techniques will be flawless and she will make no mistakes.
+
+\begin{table}[htpb]
+	\centering
+	\caption{Product information for transfer pipets and volumetric flasks, including capacity (total volume the glassware holds) and tolerance (uncertainty of measurement).}
+	\label{tab:Table1}
+	\begin{tblr}{
+			hlines, vlines,
+		}
+		Glassware ID & Capacity (mL) & Tolerance (mL) \\
+		Pipet 01     & 1             & $\pm 0.006$    \\
+		Pipet 02     & 10            & $\pm 0.01$     \\
+		Flask A      & 25            & $\pm 0.03$     \\
+		Flask B      & 50            & $\pm 0.05$     \\
+		Flask C      & 100           & $\pm 0.08$     \\
+	\end{tblr}
+\end{table}
+
+\begin{enumerate}
+	\item Determine which combination of equipment would produce the best results:
+	      \begin{enumerate}[label=\alph*.]
+		      \item Calculate the measurement with uncertainty for each of the following combinations. Use the multiplication rule
+		            \[
+			            \Delta z = \abs{ xy } \sqrt{\left( \frac{\Delta x}{x} \right)^2 + \left( \frac{\Delta y}{y} \right)^2 + \ldots}
+		            \]
+		            \begin{enumerate}
+			            \item Combination 1 - Use "Flask C" 1 time; use "Pipet 02" 5 times:
+			            \item Combination 2 - Use "Flask B" 3 times:
+			            \item Combination 3 - Use "Flask C" 1 time; use "Flask B" 1 time:
+			            \item Combination 4 - Use "Pipet 01" 150 times:
+		            \end{enumerate}
+	      \end{enumerate}
+	\item Which combination of measurements would produce the best results? Use your calculations to explain your answer.
+\end{enumerate}
